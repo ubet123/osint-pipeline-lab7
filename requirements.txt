@@ -1,0 +1,16 @@
+
+**B. `requirements.txt`:**
+```txt
+tweepy==4.14.0
+praw==7.7.1
+PyGithub==1.59.0
+snscrape==0.6.2.20230320
+python-dotenv==1.0.0
+pandas==2.0.3
+numpy==1.24.3
+textblob==0.17.1
+langdetect==1.0.9
+schedule==1.2.0
+matplotlib==3.7.2
+beautifulsoup4==4.12.2
+requests==2.31.0
