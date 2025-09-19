@@ -56,7 +56,7 @@ osint_pipeline/
 
 | Project | Screenshot |
 | ------- | ---------- |
-| Database Records | ![Screenshot 1](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123256.png) ![Screenshot 2](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123316.png) ![Screenshot 3](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123332.png) ![Screenshot 4](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123403.png) |
+| Database Records | ![Screenshot 1]('../osint_pipeline/screenshots/Screenshot%202025-09-19%20123256.png') ![Screenshot 2](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123316.png) ![Screenshot 3](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123332.png) ![Screenshot 4](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123403.png) |
 | Sentiment Chart | ![Sentiment](../osint_pipeline/screenshots/sentiment_distribution.png) ![Platform](../osint_pipeline/screenshots/platform_distribution.png) |
 | API Success | ![API](../osint_pipeline/screenshots/Screenshot%202025-09-19%20123227.png) |
 
