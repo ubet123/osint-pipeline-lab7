@@ -13,7 +13,7 @@ This project implements an automated OSINT pipeline that collects, processes, an
 ## Setup Instructions
 ```
 1.Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/ubet123/osint-pipeline-lab7.git
 cd osint_pipeline
 
 2.Create virtual environment:
