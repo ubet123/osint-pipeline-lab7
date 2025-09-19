@@ -1,0 +1,54 @@
+# collectors/instagram_collector.py
+import instaloader
+import os
+import time
+import random
+from dotenv import load_dotenv
+
+load_dotenv()
+INSTAGRAM_USER = os.getenv("INSTAGRAM_USER")
+INSTAGRAM_PASSWORD = os.getenv("INSTAGRAM_PASSWORD")
+
+L = instaloader.Instaloader(
+    sleep=True,  # Enable built-in rate limiting
+    max_connection_attempts=1,  # Don't retry too much
+    request_timeout=30
+)
+
+# Add login if credentials are provided
+if INSTAGRAM_USER and INSTAGRAM_PASSWORD:
+    try:
+        L.login(INSTAGRAM_USER, INSTAGRAM_PASSWORD)
+        print("Instagram login successful")
+    except Exception as e:
+        print(f"Instagram login failed: {e}")
+else:
+    print("Instagram credentials not found - using anonymous access")
+
+def fetch_instagram(username="bbcnews", limit=5):
+    try:
+        profile = instaloader.Profile.from_username(L.context, username)
+        results = []
+        
+        post_count = 0
+        for post in profile.get_posts():
+            if post_count >= limit:
+                break
+                
+            # Add random delay between 5-10 seconds to avoid rate limits
+            time.sleep(random.uniform(5, 10))
+            
+            results.append({
+                "platform": "instagram",
+                "user": username,
+                "timestamp": str(post.date),
+                "text": post.caption or "",
+                "url": f"https://www.instagram.com/p/{post.shortcode}/"
+            })
+            post_count += 1
+            
+        return results
+        
+    except Exception as e:
+        print(f"Instagram error for {username}: {e}")
+        return []  # Return empty list instead of crashing
