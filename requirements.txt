@@ -1,6 +1,4 @@
 
-**B. `requirements.txt`:**
-```txt
 tweepy==4.14.0
 praw==7.7.1
 PyGithub==1.59.0
